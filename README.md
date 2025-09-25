@@ -49,5 +49,3 @@ The project consists of the following files:
 - `nltk_utils.py`: Contains functions for tokenization, stemming, and creating the bag-of-words representation.
 - `intents.json`: Contains the intents, patterns, and responses used to train the model.
 - `data.pth`: The trained model saved after training.
-- `requirements.txt`: Lists all the Python dependencies needed to run the chatbot.
-- `docs/integration.md`: Guide for integrating the chatbot into a website.
