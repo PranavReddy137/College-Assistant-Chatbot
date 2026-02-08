@@ -1,84 +1,703 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "How are you",
-          "Is anyone there?",
-          "Hello",
-          "Good day"
-        ],
-        "responses": [
-          "Hey :-)",
-          "Hello, thanks for visiting",
-          "Hi there, what can I do for you?",
-          "Hi there, how can I help?"
-        ]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye"],
-        "responses": [
-          "See you later, thanks for visiting",
-          "Have a nice day",
-          "Bye! Come back again soon."
-        ]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-        "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      },
-      {
-        "tag": "items",
-        "patterns": [
-          "Which items do you have?",
-          "What kinds of items are there?",
-          "What do you sell?"
-        ],
-        "responses": [
-          "We sell coffee and tea",
-          "We have coffee and tea"
-        ]
-      },
-      {
-        "tag": "payments",
-        "patterns": [
-          "Do you take credit cards?",
-          "Do you accept Mastercard?",
-          "Can I pay with Paypal?",
-          "Are you cash only?"
-        ],
-        "responses": [
-          "We accept VISA, Mastercard and Paypal",
-          "We accept most major credit cards, and Paypal"
-        ]
-      },
-      {
-        "tag": "delivery",
-        "patterns": [
-          "How long does delivery take?",
-          "How long does shipping take?",
-          "When do I get my delivery?"
-        ],
-        "responses": [
-          "Delivery takes 2-4 days",
-          "Shipping takes 2-4 days"
-        ]
-      },
-      {
-        "tag": "funny",
-        "patterns": [
-          "Tell me a joke!",
-          "Tell me something funny!",
-          "Do you know a joke?"
-        ],
-        "responses": [
-          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-          "What did the buffalo say when his son left for college? Bison."
-        ]
-      }
-    ]
-  }
+   "intents": [
+     {
+       "tag": "greeting",
+       "patterns": [
+         "Hi",
+         "Hello",
+         "Good day",
+         "hey",
+         "whatsup"
+       ],
+       "responses": [
+         "Hello!",
+         "Good to see you again!",
+         "Hi there, how can I help?"
+       ],
+       "context_set": ""
+     },
+     {
+      "tag": "greet",
+      "patterns": [
+        "How are you",
+        "how are you doing"
+      ],
+      "responses": [
+        "I'm Great thanks for asking"
+      ],
+      "context_set": ""
+    },
+     {
+       "tag": "admissions",
+       "patterns": [
+         "admissions",
+         "application",
+         "enrollment",
+         "how to apply",
+         "what is the admission process",
+         "what is admission process",
+         "requirements"
+       ],
+       "responses": [
+         "The admissions process involves submitting an application form along with supporting documents.",
+         "To enroll at our college, you need to meet certain requirements and complete the application process."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "programs",
+       "patterns": [
+         "what are the courses offered",
+         "courses",
+         "majors",
+         "degrees",
+         "which courses are there"
+       ],
+       "responses": [
+         "Our college offers a wide range of programs and courses in various fields of study.",
+         "We have diverse majors and degrees available for students to choose from."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "campus",
+       "patterns": [
+         "campus",
+         "facilities",
+         "where is the campus located",
+         "location",
+         "what is the location of the campus"
+       ],
+       "responses": [
+         "Our college campus is located in a convenient location with state-of-the-art facilities.",
+         "We have excellent campus facilities that provide a conducive learning environment for students."
+       ],
+       "context_set": ""
+     },
+
+     {
+       "tag": "housing",
+       "patterns": [
+         "housing",
+         "residence",
+         "what about the housing",
+         "dormitory",
+         "where can i live near the campus"
+       ],
+       "responses": [
+         "Our college provides on-campus housing options for students. We have well-maintained dormitories with various amenities. You can find more information about housing facilities on our website.",
+         "If you're looking for housing options near the campus, we also have partnerships with local housing providers. Our housing office can assist you in finding suitable accommodation."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "faculties",
+       "patterns": [
+         "faculties",
+         "professors",
+         "how are the faculty",
+         "instructors",
+         "is faculty good"
+       ],
+       "responses": [
+         "Our college has a dedicated faculty comprising experienced professors and instructors. They are committed to providing quality education and guidance to students.",
+         "Our faculty members are experts in their respective fields and are actively involved in research and academia."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "events",
+       "patterns": [
+         "events",
+         "activities",
+         "what are the events",
+         "clubs",
+         "organizations",
+         "what are the clubs"
+       ],
+       "responses": [
+         "Our college hosts a variety of events, activities, clubs, and organizations to provide a vibrant campus life for students. You can participate in cultural events, sports competitions, workshops, and more.",
+         "We have numerous student-led clubs and organizations catering to diverse interests. These provide opportunities to connect with like-minded peers and engage in extracurricular activities."
+       ],
+       "context_set": ""
+     },
+     {
+      "tag": "nirf",
+      "patterns": [
+        "what is the nirf ranking",
+        "college ranking",
+        "naac certified",
+        "what is the college ranking"
+      ],
+      "responses": [
+        "college ranking is below 200 and it is naac a++ accredited"
+      ],
+      "context_set": ""
+    },
+     {
+       "tag": "scholarships",
+       "patterns": [
+         "scholarships",
+         "financial aid",
+         "do you have scholarship",
+         "grants",
+         "can i get scholarship"
+       ],
+       "responses": [
+         "Our college offers various scholarships and financial aid options to support students financially. You can find more information about scholarships and grants on our website or contact the financial aid office."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "career_services",
+       "patterns": [
+         "career services",
+         "do you have job placement",
+         "job placement",
+         "internships",
+         "will i get inernhsip"
+       ],
+       "responses": [
+         "Our college provides comprehensive career services to assist students in their job search and professional development. We offer resources for resume writing, interview preparation, and job placement assistance.",
+         "We have strong industry connections and work closely with employers to provide internship opportunities for our students."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "library",
+       "patterns": [
+         "library",
+         "books",
+         "is there a library",
+         "do you have library",
+         "can i get books"
+       ],
+       "responses": [
+         "Our college library is well-stocked with a wide range of books and resources to support student research and learning.",
+         "You can access a variety of online databases, journals, and e-books through our library system. Our librarians are also available to assist you with finding relevant research materials."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "student_support",
+       "patterns": [
+         "support",
+         "assistance",
+         "counseling",
+         "do you have counseling"
+       ],
+       "responses": [
+         "Our college provides comprehensive student support services to help you succeed academically. We offer tutoring, study groups, and academic advising to assist you in your coursework.",
+         "Counseling services are available to address any personal or academic challenges you may face. Our counselors are trained professionals who can provide guidance and support."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "study_abroad",
+       "patterns": [
+         "study abroad",
+         "can i study abroad",
+         "international programs",
+         "exchange opportunities"
+       ],
+       "responses": [
+         "Our college offers study abroad programs that provide students with an opportunity to explore different cultures and gain a global perspective.",
+         "You can participate in our exchange programs and spend a semester or year studying at one of our partner institutions around the world."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "research_opportunities",
+       "patterns": [
+         "research",
+         "can i do research",
+         "research grants",
+         "how is research"
+       ],
+       "responses": [
+         "We encourage undergraduate students to engage in research projects under the guidance of faculty mentors.",
+         "There are research grants available for students interested in conducting independent research or participating in research collaborations with faculty members."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "sports",
+       "patterns": [
+         "sports",
+         "athletics",
+         "can i play sports",
+         "do you have sports"
+       ],
+       "responses": [
+         "Our college offers a variety of sports programs and has competitive sports teams representing our institution.",
+         "You can utilize our fitness center, which is equipped with state-of-the-art facilities, to stay active and maintain a healthy lifestyle."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "technology_resources",
+       "patterns": [
+         "technology resources",
+         "what are the technology resources"
+       ],
+       "responses": [
+         "We provide extensive technology resources to support your academic journey, including computer labs, software access, and IT support services.",
+         "Our computing services ensure that you have the necessary tools and technical assistance to enhance your learning experience."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "student_life",
+       "patterns": [
+         "life",
+         "activities",
+         "organizations",
+         "how is college life",
+         "how is student life"
+       ],
+       "responses": [
+         "Our college offers a vibrant student life with various campus activities and a wide range of student organizations.",
+         "You can get involved in clubs, student government, cultural organizations, and more to make the most of your college experience."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "health_services",
+       "patterns": [
+         "health",
+         "medical",
+         "do you have health care",
+         "do you have medical centre"
+       ],
+       "responses": [
+         "We have a health center on campus that provides medical services and basic healthcare to students.",
+         "Counseling services are also available to support your mental health and well-being."
+       ],
+       "context_set": ""
+     },
+     {
+      "tag": "hours",
+      "patterns": [
+         "timing",
+         "what is the timing",
+         "what time does college start",
+         "what are working days"
+      ],
+      "responses": [
+         "College is open 8am-5pm Monday-Saturday!"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "number",
+      "patterns": [
+         "call",
+         "how to contact",
+         "give me contact"
+      ],
+      "responses": [
+         "You can contact at: xxxxxxxxxx"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "course",
+      "patterns": [
+         "courses",
+         "branches",
+         "what are the courses available",
+         "how many branches"
+      ],
+      "responses": [
+         "Our university offers Information Technology, computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "fees",
+      "patterns": [
+         "fee",
+         "fees",
+         "what is the fee"
+      ],
+      "responses": [
+         "For Fee detail visit https://www.cbit.ac.in/admission_post/fee-structure/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "location",
+      "patterns": [
+         "located",
+         "address",
+         "location",
+         "where is the college",
+         "what is the location of college"
+      ],
+      "responses": [
+         "https://goo.gl/maps/QYwDjPUPVnhyU5oy9"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "hostel",
+      "patterns": [
+         "hostel facility",
+         "hostel",
+         "do you have hostel",
+         "where is the hostel"
+      ],
+      "responses": [
+         "We have hostel facility only for boys as of now. For more information contact : xxxxxxxxxx"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "event",
+      "patterns": [
+         "Events",
+         "functions",
+         "events",
+         "what are the event"
+      ],
+      "responses": [
+         "For event detail visit https://www.cbit.ac.in/campuslife_post/events/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "document",
+      "patterns": [
+         "documents",
+         "documents needed",
+         "what are the document",
+         "what are the documents"
+      ],
+      "responses": [
+         "You need all your transcripts along with TC's and Bonafides. To know more about document required visit https://www.cbit.ac.in/admission_post/how-to-apply/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "floors",
+      "patterns": [
+         "campus",
+         "floors",
+         "how big is the campus",
+         "how big is the college",
+         "what is the size of the college"
+      ],
+      "responses": [
+         "My College is a total 50 acre campus, with around 10 blocks and student strength of 5000 "
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "syllabus",
+      "patterns": [
+         "syllabus",
+         "timetable",
+         "what is the syllabus",
+         "what is the timetable"
+      ],
+      "responses": [
+         "Timetable is provided direct to the students OR To know about syllabus visit https://www.cbit.ac.in/current_students/ug-and-pg-syllabus-structure/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "library",
+      "patterns": [
+         "Library"
+      ],
+      "responses": [
+         "There is one huge and spacious library.timings are 8am to 6pm."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "infrastructure",
+      "patterns": [
+         "infrastructure",
+         "how is the infrastructure",
+         "is the infrastructure"
+      ],
+      "responses": [
+         "Our University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "canteen",
+      "patterns": [
+         "canteen",
+         "Food",
+         "Cafetaria",
+         "do you have canteen",
+         "is the canteen good",
+         "what do you have in canteen"
+      ],
+      "responses": [
+         "Our university has canteen with variety of food available"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "menu",
+      "patterns": [
+         "food menu",
+         "menu",
+         "what is the menu",
+         "how big is the menu"
+      ],
+      "responses": [
+         "we serve Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali and many more on menu"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "placement",
+      "patterns": [
+         "companies visit",
+         "package",
+         "placement",
+         "recruitment",
+         "companies",
+         "are the placements good",
+         "will i get job"
+      ],
+      "responses": [
+         "To know about placement visit <a target=\"_blank\" href=\"PLACEMENT INFORMATION LINK FROM YOUR UNIVERSITY WEBSITE IF THEY HAVE\">here</a>"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "ithod",
+      "patterns": [
+         "HOD",
+         "hod"
+      ],
+      "responses": [
+         "All engineering departments have their hod XYZ who available on (Place name)"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "principal",
+      "patterns": [
+         "principal",
+         "who is the principal",
+         "what is the name of the principal",
+         "who is principal"
+      ],
+      "responses": [
+         "Prof. C. V. NARASIMHULU is the college principal and if you need any help then call your branch hod first.That is more appropriate"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "sem",
+      "patterns": [
+         "exam dates",
+         "exam schedule",
+         "exam",
+         "when are exams",
+         "when are the exams",
+         "what is the exam schedule"
+      ],
+      "responses": [
+         "Here is the Academic Calendar  https://www.cbit.ac.in/current_students/acedamic-calendar/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "admission",
+      "patterns": [
+         "admission",
+         "what is admission process"
+      ],
+      "responses": [
+         "Application can also be submitted online through eamcet counselling and the Unversity's AEC "
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "scholarship",
+      "patterns": [
+         "scholarship",
+         "can i get refund",
+         "can i get financial aid"
+      ],
+      "responses": [
+         "Many government scholarships are supported by our university. For details and updates visit https://www.cbit.ac.in/about_post/scholarship/"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "facilities",
+      "patterns": [
+         "facilities",
+         "facilities provided",
+         "what are the facilities provided"
+      ],
+      "responses": [
+         "Our university's Engineering department provides fully AC Lab with internet connection, smart classroom, Auditorium, library,canteen"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "college intake",
+      "patterns": [
+         "intake",
+         "seat allotment",
+         "seats",
+         "how many seats are there",
+         "how many seats",
+         "how many seat"
+      ],
+      "responses": [
+         "For IT, Computer and extc 60 per branch and seat may be differ for different department."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "uniform",
+      "patterns": [
+         "dresscode",
+         "uniform",
+         "what is the dresscode",
+         "is there dresscode",
+         "is there uniform"
+      ],
+      "responses": [
+         "ENTER YOUR OWN UNIVERSITY UNIFORM CIRCULER"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "committee",
+      "patterns": [
+         "committee",
+         "who are in the committee",
+         "who are in the comitee"
+      ],
+      "responses": [
+         "For the various committe in college contact this number: ADD NUMBER"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "random",
+      "patterns": [
+         "I love you",
+         "Will you marry me",
+         "Do you love me"
+      ],
+      "responses": [
+         "I am not program for this, please ask appropriate query"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "swear",
+      "patterns": [
+         "fuck",
+         "bitch",
+         "shut up",
+         "hell",
+         "stupid",
+         "idiot",
+         "dumb ass",
+         "asshole",
+         "fucker"
+      ],
+      "responses": [
+         "please use appropriate language",
+         "Maintaining decency would be appreciated"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "vacation",
+      "patterns": [
+         "holidays",
+         "vacation"
+      ],
+      "responses": [
+         "Academic calender is given to you by your class-soordinators after you join your respective classes"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "sports",
+      "patterns": [
+         "games",
+         "Sports"
+      ],
+      "responses": [
+         "Our university encourages all-round development of students and hence provides sports facilities in the campus."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "salutaion",
+      "patterns": [
+         "okk",
+         "okie",
+         "nice work",
+         "well done",
+         "good job",
+         "thanks for the help",
+         "Thank You",
+         "its ok",
+         "Thanks",
+         "Good work",
+         "k",
+         "ok",
+         "okay"
+      ],
+      "responses": [
+         "I am glad I helped you",
+         "welcome, anything else i can assist you with?"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "task",
+      "patterns": [
+         "help me"
+      ],
+      "responses": [
+         "I can answer to low-intermediate questions regarding college",
+         "You can ask me questions regarding college, and i will try to answer them"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "ragging",
+      "patterns": [
+         "ragging",
+         "ragging juniors",
+         "ragging history",
+         "ragging incidents"
+      ],
+      "responses": [
+         "We are Proud to tell you that our college provides ragging free environment, and we have strict rules against ragging"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "hod",
+      "patterns": [
+         "hod",
+         "hod name",
+         "who is the hod"
+      ],
+      "responses": [
+         "HODs differ for each branch, please be more specific like: (HOD it)"
+      ],
+      "context_set": ""
+   }
+   ]
+ }
+ 
